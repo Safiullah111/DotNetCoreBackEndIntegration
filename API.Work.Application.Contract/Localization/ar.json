@@ -1,0 +1,5 @@
+﻿{
+  "WelcomeMessage": "Welcome to our application!",
+  "GoodbyeMessage": "Thank you for visiting. Goodbye!",
+  "APIWork_00001": "There is already an API with the same name: {name}"
+}

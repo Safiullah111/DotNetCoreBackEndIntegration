@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\Localization\**" />
+    <EmbeddedResource Remove="Common\Localization\**" />
+    <None Remove="Common\Localization\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.Work.Application.Contract\API.Work.Application.Contract.csproj" />
+    <ProjectReference Include="..\API.Work.Domain.Shared\API.Work.Domain.Shared.csproj" />
+    <ProjectReference Include="..\API.Work.Domain\API.Work.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.0" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Permissions\" />
+    <Folder Include="Queries\Permissions\" />
+    <Folder Include="Queries\Roles\" />
+  </ItemGroup>
+
+</Project>

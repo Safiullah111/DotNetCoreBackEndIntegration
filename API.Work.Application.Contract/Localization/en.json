@@ -1,0 +1,31 @@
+﻿{
+  "WelcomeMessage": "Welcome to our application!",
+  "GoodbyeMessage": "Thank you for visiting. Goodbye!",
+  "APIWork_00001": "There is already an API with the same name: {name}",
+
+  "APIWork_Auth_User_Not_Found_404": "User not found with id : {id}.",
+  "APIWork_Auth_Invalid_Credential_403": "Invalid credentials email : {email}.",
+  "APIWork_Auth_User_Inactive_403": "User is inactive. Please contact support email : {email}.",
+  "APIWork_Auth_Account_Locked_403": "User account is locked. Please try again later email : {email}.",
+  "APIWork_Auth_Internal_Error_500": "An internal error occurred email : {email}.",
+  "APIWork_Auth_Refresh_Token_Not_Found_404": "Invalid refresh token : {email}.",
+  "APIWork_Auth_Refresh_Token_Revoked_403": "Refresh token has been revoked : {email}.",
+  "APIWork_Auth_Refresh_Token_Expired_401": "Refresh token has expired : {email}.",
+
+  "APIWork_User_Creation_Failed_400": "Failed to create user name : {name}.",
+  "APIWork_User_Successfully_Created_201": "User created successfully id : {id}.",
+  "APIWork_User_Update_Failed_400": "Failed to update user id : {id}.",
+  "APIWork_User_Successfully_Updated_200": "User updated successfully id : {id}.",
+  "APIWork_User_Retrieved_Successfully_200": "User retrieved successfully id : {id}.",
+  "APIWork_User_Deletion_Failed_400": "Failed to delete user id : {id}.",
+  "APIWork_User_Deleted_Successfully_200": "User deleted successfully id : {id}.",
+
+  "APIWork_Role_Not_Found_404": "Role not found id : {id}.",
+  "APIWork_Role_Creation_Failed_400": "Failed to create role name : {name}.",
+  "APIWork_Role_Successfully_Created_201": "Role created successfully id : {id}.",
+  "APIWork_Role_Update_Failed_400": "Failed to update role id : {id}.",
+  "APIWork_Role_Successfully_Updated_200": "Role updated successfully id : {id}.",
+  "APIWork_Role_Retrieved_Successfully_200": "Role retrieved successfully id : {id}.",
+  "APIWork_Role_Deletion_Failed_400": "Failed to delete role id : {id}.",
+  "APIWork_Role_Deleted_Successfully_200": "Role deleted successfully id : {id}."
+}

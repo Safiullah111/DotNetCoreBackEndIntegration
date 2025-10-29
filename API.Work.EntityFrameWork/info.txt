@@ -1,0 +1,61 @@
+﻿// EF Core repository implementations
+
+*** Project References
+//  Project.Domain OR Project.Domain.Shared Layer
+
+***Libaries We Use in Project Infrastructure
+// Microsoft.EntityFrameworkCore
+// Microsoft.EntityFrameworkCore.SqlServer
+// Microsoft.Extensions.Configuration.Abstractions
+// Microsoft.EntityFrameWork.Tools
+// Microsoft.EntityFrameworkCore.Design
+
+
+*** IDBContextProvider Interface
+You want looser coupling between repository/service and DbContext.
+
+You want more control over DbContext creation and lifetime.
+
+You have multiple DbContexts and want to centralize access.
+
+You want to simplify testing by mocking the provider.
+
+You want to follow dependency inversion principle more strictly.
+
+*** Intial Migrations Command 
+dotnet ef migrations add InitialCreate --project API.Work.EntityFrameWork --startup-project API.Work.DbMigrator
+
+
+
+*** Role Permission ********************
+How this works:
+
+A User can have many Roles (UserRole).
+
+A Role can have many Permissions (RolePermission).
+
+Optionally, a User can have direct Permissions (UserPermission) that override or complement roles.
+
+
++---------+       +-------------+       +-----------+
+|  User   |──────►|  UserRole   |◄──────|   Role    |
++---------+       +-------------+       +-----------+
+| UserId  |       | UserId      |       | RoleId    |
+| Name    |       | RoleId      |       | Name      |
++---------+       +-------------+       +-----------+
+     │                                        │
+     │                                        ▼
+     │                                +------------------+
+     │                                | RolePermission   |
+     │                                +------------------+
+     │                                | RoleId           |
+     │                                | PermissionId     |
+     │                                +------------------+
+     │                                        │
+     ▼                                        ▼
++------------------+                  +------------------+
+|  UserPermission  |◄─────────────────|   Permission     |
++------------------+                  +------------------+
+| UserId           |                  | PermissionId     |
+| PermissionId     |                  | Name             |
++------------------+                  +------------------+

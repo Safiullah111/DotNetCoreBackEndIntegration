@@ -1,0 +1,10 @@
+﻿****Project								References
+domain.shared 							   None
+domain          	                    domain.shared
+application.contract	                domain.shared
+application						    	domain, application.contract
+entityframework							domain, domain.shared
+httpclient								application.contract (if using DTOs), domain.shared
+web										application, application.contract, entityframework, httpclient
+dbmigrator								entityframework, domain, application
+test									application, entityframework, httpclient, web

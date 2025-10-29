@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.Localizer.Json" Version="1.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+		<PackageReference Include="Westwind.Globalization" Version="3.1.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\API.Work.Application.Contract\API.Work.Application.Contract.csproj" />
+		<ProjectReference Include="..\API.Work.Application\API.Work.Application.csproj" />
+		<ProjectReference Include="..\API.Work.EntityFrameWork\API.Work.EntityFrameWork.csproj" />
+		<ProjectReference Include="..\API.Work.Http.Client\API.Work.Http.Client.csproj" />
+	</ItemGroup>
+
+</Project>
