@@ -1,0 +1,19 @@
+﻿
+** Library We Use in Project Dbmigrator
+Microsoft.Extensions.Hosting
+
+Microsoft.Extensions.DependencyInjection
+
+Microsoft.Extensions.Configuration
+
+Microsoft.EntityFrameworkCore
+
+Microsoft.EntityFrameworkCore.SqlServer
+
+** Project Referneces
+ Project.EnittyFrameWorkCore OR Infrastructure Layer
+
+
+ **design-time factory class 
+ The design-time factory is a helper that tells EF Core how to make your DbContext when running migration commands, 
+ especially if EF Core can't figure it out automatically.
